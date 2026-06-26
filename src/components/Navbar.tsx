@@ -38,20 +38,20 @@ export function Navbar() {
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="bg-gradient-to-r from-orange-600 via-amber-600 to-rose-600 text-white text-xs font-semibold py-2 px-5 flex items-center justify-between w-full overflow-hidden"
+              className="bg-gradient-to-r from-orange-600 via-amber-600 to-rose-600 text-white text-xs font-semibold py-2.5 px-4 pr-10 relative text-center w-full overflow-hidden"
             >
-              <div className="flex items-center gap-2 mx-auto text-center">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
                 <span className="hidden sm:inline">🎁</span>
                 <span>
-                  <strong>Primeira vez?</strong> Use o cupom <span className="bg-white/20 px-1.5 py-0.5 rounded font-mono text-[10px]">MEUPET10</span> e ganhe 10% OFF no primeiro agendamento!
+                  <strong>Primeira vez?</strong> Use o cupom <span className="bg-white/20 px-1.5 py-0.5 rounded font-mono text-[10px]">MEUPET10</span> e ganhe 10% OFF!
                 </span>
                 <a
                   href={CLIENT.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline hover:text-orange-100 font-bold ml-2 inline-flex items-center gap-0.5"
+                  className="underline hover:text-orange-100 font-bold ml-1 inline-flex items-center gap-0.5"
                 >
-                  Agendar agora →
+                  Agendar →
                 </a>
               </div>
               <button
@@ -59,7 +59,7 @@ export function Navbar() {
                   e.stopPropagation()
                   setShowBanner(false)
                 }}
-                className="text-white/60 hover:text-white shrink-0 p-1 rounded-full hover:bg-white/10 transition-colors"
+                className="absolute right-2 top-1/2 -translate-y-1/2 text-white/70 hover:text-white p-1 rounded-full hover:bg-white/10 transition-colors"
                 aria-label="Fechar aviso"
               >
                 <X size={14} />
